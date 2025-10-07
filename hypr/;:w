@@ -2,7 +2,7 @@
 # See https://wiki.hypr.land/Configuring/Workspace-Rules/ for workspace rules
 
 # Example windowrule
-windowrule = float,class:^(kitty)$,title:^(kitty)$
+# windowrule = float,class:^(kitty)$,title:^(kitty)$
 
 # Ignore maximize requests from apps. You'll probably like this.
 windowrule = suppressevent maximize, class:.*
@@ -10,7 +10,4 @@ windowrule = suppressevent maximize, class:.*
 # Fix some dragging issues with XWayland
 windowrule = nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0
 
-windowrule = workspace 2, class:firefox, title:Mozilla Firefox
-windowrule = workspace 2, class:firefox, title:Firefox - Choose User Profile
-windowrule = float, class:steam, title:.*
-windowrule = workspace 3, class:steam, title:.*
+windowrulev2 = workspace [2], class:firefox, title:Mozilla Firefox
