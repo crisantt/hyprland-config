@@ -6,7 +6,7 @@ echo "-----------------------"
 echo "--- Post Arch Setup ---"
 echo "-----------------------"
 echo
-mkdir -p "/home/$USER/git"
+mkdir -p "/home/$USER/Git"
 echo "Would you like to install the packages?"
 read -p "Enter [Y]es : [n]o: " answer
 case "$answer" in
@@ -18,7 +18,7 @@ case "$answer" in
 		if [[ "$answer" == "yes" ]]; then
 			echo "---Installing AUR Helper (PARU)---"
 			sudo pacman -S --needed base-devel
-			cd "/home/$USER/git"
+			cd "/home/$USER/Git"
 			git clone https://aur.archlinux.org/paru.git
 			cd paru
 			makepkg -si
@@ -43,7 +43,8 @@ case "$answer" in
 		echo
 
 		echo -e "\nSystem Packages"
-		sudo pacman -S --noconfirm libnotify
+		sudo pacman -S --noconfirm libnotify \
+			wl-clipboard
 
 		echo
 
@@ -64,6 +65,7 @@ case "$answer" in
 			mako \
 			neovim \
 			thunar \
+			cliphist \
 			obs-studio \
 			obsidian \
 			discord
