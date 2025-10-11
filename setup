@@ -2,16 +2,16 @@
 
 # - Post Arch installation script for me
 
-echo "------------------"
-echo "--- Arch Setup ---"
-echo "------------------"
+echo "-----------------------"
+echo "--- Post Arch Setup ---"
+echo "-----------------------"
 echo
 mkdir -p "/home/$USER/git"
 echo "Would you like to install the packages?"
 read -p "Enter [Y]es : [n]o: " answer
 case "$answer" in
     y|Y) 
-
+	echo
         echo -e "\nWould you like this script to build programs?"
         read -p "Type yes : no: " answer        
         answer=${answer,,}
@@ -42,7 +42,7 @@ case "$answer" in
         
         echo
 
-        echo -e "\nEssential Packages"
+        echo -e "\nSystem Packages"
         sudo pacman -S --noconfirm libnotify
 
         echo
@@ -50,6 +50,7 @@ case "$answer" in
         echo -e "\nDeveloper Packages"
         sudo pacman -S --noconfirm zig \
         git \
+	github-cli \
         wget \
         unzip \
         zip
@@ -59,10 +60,13 @@ case "$answer" in
         echo -e "\nUser Packages"
         sudo pacman -S --noconfirm ghostty \
         alacritty \
+	kitty \
         mako \
         neovim \
         thunar \
-        obs-studio
+        obs-studio \
+	obsidian \
+	discord
         paru -S tofi
         
         echo
@@ -125,9 +129,9 @@ case "$answer" in
 
         echo -e "\nInstalling Fonts"
         sudo pacman -S --noconfirm noto-fonts \
-        ttf-fonts-cjk \
-        ttf-fonts-emoji \
-        ttf-fonts-extra \
+        noto-fonts-cjk \
+        noto-fonts-emoji \
+        noto-fonts-extra \
         ttf-dejavu \
         ttf-liberation \
         ttf-ubuntu-font-family \
@@ -137,10 +141,11 @@ case "$answer" in
 
         mkdir -p "/home/$USER/.fonts"
         cd "/home/$USER/.fonts"
-        fonts=("CodeNewRoman" "DejaVuSansMono" "FiraCode" "JetBrainsMono" "Noto")
+        fonts=("CodeNewRoman" "DejaVuSansMono" "FiraCode" "JetBrainsMono" "Noto" "NerdFontsSymbolsOnly")
         for font in "${fonts[@]}"; do
             wget "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/$font.zip"
             unzip -n "$font.zip"
+	    rm -f "$font.zip"
         done
         cd "/home/$USER"
         fc-cache -fv
