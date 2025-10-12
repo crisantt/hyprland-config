@@ -15,5 +15,6 @@ alias search='sudo pacman -Ss'
 alias install='sudo pacman -S'
 alias update='sudo pacman -Sy'
 alias upgrade='sudo pacman -Syu'
+alias dev='cd /home/cris/Personal'
 
 eval "$(starship init bash)"
