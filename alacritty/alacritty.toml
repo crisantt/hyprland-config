@@ -3,7 +3,7 @@ import = [
 "/home/cris/.config/alacritty/nord.toml"
 ]
 [font]
-normal = { family = "UbuntuMono Nerd Font Mono", style = "Regular" }
+normal = { family = "CodeNewRoman Nerd Font", style = "Regular" }
 size = 14.0
 
 [window]

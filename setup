@@ -28,6 +28,8 @@ case "$answer" in
 			echo "Skipping  this part..."
 		fi
 
+		echo
+		echo
 		echo -e "Setup Starting...\nHyprland Packages"
 		# Where installation starts
 		sudo pacman -Syu --noconfirm hyprland \
@@ -41,26 +43,24 @@ case "$answer" in
 			qt6-wayland
 
 		echo
-
+		echo
 		echo -e "\nSystem Packages"
 		sudo pacman -S --noconfirm libnotify \
 			wl-clipboard
 
 		echo
-
+		echo
 		echo -e "\nDeveloper Packages"
-		sudo pacman -S --noconfirm zig \
-			git \
+		sudo pacman -S --noconfirm git \
 			github-cli \
 			wget \
 			unzip \
 			zip
 
 		echo
-
+		echo
 		echo -e "\nUser Packages"
-		sudo pacman -S --noconfirm ghostty \
-			alacritty \
+		sudo pacman -S --noconfirm alacritty \
 			kitty \
 			mako \
 			neovim \
@@ -72,7 +72,7 @@ case "$answer" in
 		paru -S tofi
 
 		echo
-
+		echo
 		echo -e "\nGaming Packages"
 		sudo pacman -S --noconfirm steam \
 			lib32-mesa \
@@ -128,7 +128,7 @@ case "$answer" in
 			lutris
 
 		echo
-
+		echo
 		echo -e "\nInstalling Fonts"
 		sudo pacman -S --noconfirm noto-fonts \
 			noto-fonts-cjk \
@@ -153,7 +153,7 @@ case "$answer" in
 		fc-cache -fv
 
 		echo
-
+		echo
 		echo -e "\nChoose your browser"
 		browser_opt=("Helium" "Floorp" "Firefox")
 		select browser in "${browser_opt[@]}"; do
