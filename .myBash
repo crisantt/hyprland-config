@@ -1,20 +1,15 @@
 #
-# ~/.bashrc
-#
-
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-PS1='[\u@\h \W]\$ '
-
-# Custom Alias
+# ~/Personal/hyprland-config/.myBash
+# 
+alias v='nvim'
+alias cat='bat'
 alias custom='cd /home/cris/.config/hypr && nvim hyprland.conf'
 alias search='sudo pacman -Ss'
 alias install='sudo pacman -S'
+alias remove='sudo pacman -Rns'
 alias update='sudo pacman -Sy'
 alias upgrade='sudo pacman -Syu'
 alias dev='cd /home/cris/Personal'
+alias cris='cd /home/cris'
 
-eval "$(starship init bash)"
+export PATH=$PATH:/home/cris/Git/zig/build/stage3/bin
