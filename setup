@@ -55,7 +55,11 @@ case "$answer" in
 			github-cli \
 			wget \
 			unzip \
-			zip
+			zip \
+			llvm \
+			cmake \
+			make \
+			lld
 
 		echo
 		echo
