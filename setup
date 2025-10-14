@@ -47,7 +47,9 @@ case "$answer" in
 		echo -e "\nSystem Packages"
 		sudo pacman -S --noconfirm libnotify \
 			wl-clipboard \
-			reflector
+			reflector \
+			unzip \
+			zip \
 		systemctl enable reflector.service
 		systemctl enable reflector.timer
 
@@ -58,8 +60,8 @@ case "$answer" in
 			github-cli \
 			zig \
 			wget \
-			unzip \
-			zip \
+			man \
+			tldr \
 			llvm \
 			cmake \
 			make \
