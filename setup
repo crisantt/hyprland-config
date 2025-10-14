@@ -46,26 +46,32 @@ case "$answer" in
 		echo
 		echo -e "\nSystem Packages"
 		sudo pacman -S --noconfirm libnotify \
-			wl-clipboard
+			wl-clipboard \
+			reflector
+		systemctl enable reflector.service
+		systemctl enable reflector.timer
 
 		echo
 		echo
 		echo -e "\nDeveloper Packages"
 		sudo pacman -S --noconfirm git \
 			github-cli \
+			zig \
 			wget \
 			unzip \
 			zip \
 			llvm \
 			cmake \
 			make \
-			lld
+			lld \
+			clangd
 
 		echo
 		echo
 		echo -e "\nUser Packages"
 		sudo pacman -S --noconfirm alacritty \
 			kitty \
+			ghostty \
 			mako \
 			neovim \
 			thunar \
