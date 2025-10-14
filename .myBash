@@ -10,6 +10,12 @@ alias remove='sudo pacman -Rns'
 alias update='sudo pacman -Sy'
 alias upgrade='sudo pacman -Syu'
 alias dev='cd /home/cris/Personal'
-alias cris='cd /home/cris'
+alias home='cd /home/cris'
+
+# Git Alias
+alias add="git add"
+alias Add="git add ."
+alias comm="git commit -m"
+alias push="git push -u origin main"
 
 export PATH=$PATH:/home/cris/Git/zig/build/stage3/bin
