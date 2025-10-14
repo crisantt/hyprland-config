@@ -14,7 +14,7 @@ alias home='cd /home/cris'
 
 # Git Alias
 alias add="git add"
-alias Add="git add ."
+alias gad="git add ."
 alias comm="git commit -m"
 alias push="git push -u origin main"
 
