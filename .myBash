@@ -18,4 +18,7 @@ alias gad="git add ."
 alias comm="git commit -m"
 alias push="git push -u origin main"
 
+# Starship init
+eval "$(starship init bash)"
+
 export PATH=$PATH:/home/cris/Git/zig/build/stage3/bin
