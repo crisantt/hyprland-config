@@ -54,19 +54,7 @@ case "$answer" in
 		echo
 		echo
 		echo -e "\nDeveloper Packages"
-		sudo pacman -S --noconfirm  go \
-			git \
-			man \
-			github-cli \
-			zig \
-			wget \
-			man \
-			tldr \
-			llvm \
-			cmake \
-			make \
-			lld \
-			clangd
+		sudo pacman -S --noconfirm  go git man github-cli zig wget man tldr llvm cmake make lld clangd
 
 		echo
 		echo
