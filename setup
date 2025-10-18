@@ -49,7 +49,7 @@ case "$answer" in
 			wl-clipboard \
 			reflector \
 			unzip \
-			zip \
+			zip 
 
 		echo
 		echo
@@ -80,7 +80,8 @@ case "$answer" in
 			cliphist \
 			obs-studio \
 			obsidian \
-			discord
+			discord \
+			pavucontrol
 		paru -S tofi
 
 		echo
