@@ -50,8 +50,6 @@ case "$answer" in
 			reflector \
 			unzip \
 			zip \
-		systemctl enable reflector.service
-		systemctl enable reflector.timer
 
 		echo
 		echo
